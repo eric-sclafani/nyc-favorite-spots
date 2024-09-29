@@ -34,7 +34,6 @@ export class MapComponent implements OnInit {
             'map',
             { 
                 layers: this.markers,
-                minZoom:15
             }
         );
         L.tileLayer(baseMapURl).addTo(this.map);
@@ -43,7 +42,6 @@ export class MapComponent implements OnInit {
 
     private centerMap():void {
 
-        // Create a LatLngBounds object to encompass all the marker locations
         const bounds = L.latLngBounds(
             this.markers.map(
                 marker => marker.getLatLng()
