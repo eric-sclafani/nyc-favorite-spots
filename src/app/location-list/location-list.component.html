@@ -1,0 +1,14 @@
+<ng-template #locationItem let-loc="loc">
+    <div class="location-item">
+        <header>{{ loc.name }}</header>
+    </div>
+</ng-template>
+
+
+<section id="locations-wrapper">
+    @for(loc of locations; track loc){
+        <ng-container *ngTemplateOutlet="locationItem; context: {loc: loc}"></ng-container>
+    }
+</section>
+
+

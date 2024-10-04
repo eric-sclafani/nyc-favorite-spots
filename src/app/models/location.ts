@@ -12,7 +12,7 @@ export const locations: Location[] = [
         name: 'Juaja',
         lat: 40.65629271345367,
         long: -73.9597840610175,
-        review: '',
+        review: 'My favorite Mexican food in NYC so far. Chill atmosphere, nice employees, and killer steak nachos.',
         favoriteOrders: ['Steak nachos', 'Fries', 'Quesadillas'],
         link: 'https://www.clover.com/online-ordering/jauja-mexican-kitchen-food-brooklyn-new-york'
     },
@@ -20,7 +20,7 @@ export const locations: Location[] = [
         name: 'Dave\'s Hot Chicken',
         lat: 40.692906591390994,
         long:  -73.98847380498599,
-        review: '',
+        review: 'Really great chicken sandwhiches. Does them differently than most places.',
         favoriteOrders: ['2 Sliders with fries, added cheese, medium spice level'],
         link: 'https://restaurants.daveshotchicken.com/ny/brooklyn/hot-chicken-adams-st/'
     },
@@ -28,7 +28,7 @@ export const locations: Location[] = [
         name: 'Blank Street Coffee',
         lat: 40.69348794968939,
         long:  -73.98597859260254,
-        review: '',
+        review: 'My favorite coffee in NYC so far. Friendly staff, good location to my work.',
         favoriteOrders:['Cold brew, black', 'Banana bread'],
         link: 'https://www.blankstreet.com/en-US/locations/new-york/L0ZQGWDTP9ZSJ-metrotech-center'
     },
@@ -36,7 +36,7 @@ export const locations: Location[] = [
         name: 'Headrest Coffee',
         lat: 40.699770938457334,
         long: -73.9159079355029,
-        review: '',
+        review: 'Best non-chain coffee I\'ve had. Very chill and hipster vibes to it.',
         favoriteOrders: ['Cold brew, black', "Bacon, egg, cheese on everything bagel"],
         link: 'https://headrestcoffee.com/'
     },
@@ -44,7 +44,7 @@ export const locations: Location[] = [
         name: 'Tony\s Pizza',
         lat: 40.69923416773374,
         long:  -73.91882022580194,
-        review: '',
+        review: 'Best pizza in Bushwick. They have creative slices and it all tastes great.',
         favoriteOrders: ['Regular slice', "Chicken parm slice", "Scilian slice"],
         link: 'http://places.singleplatform.com/tonys-pizzeria--restaurant-0/menu?ref=google'
     },
@@ -52,7 +52,7 @@ export const locations: Location[] = [
         name: 'Ramen Danbo Park Slope',
         lat: 40.67614876425373, 
         long: -73.97452541647573,
-        review: '',
+        review: 'Nice but very busy place. Fantastic ramen.',
         favoriteOrders: ['Classic tonkatsu ramen'],
         link: 'https://ramendanbo.com/our-menu-park-slope/'
     },
@@ -60,7 +60,7 @@ export const locations: Location[] = [
         name: 'Amaranto',
         lat: 40.703158557122784, 
         long: -73.92185981658916,
-        review: '',
+        review: 'Nice family-owned place. Best burritos I\'ve ever had in NYC so far.',
         favoriteOrders: ['Steak burrito', 'Spicy guacamole, chips'],
         link: 'http://www.amarantobklyn.com/'
     }

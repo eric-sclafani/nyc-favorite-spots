@@ -6,7 +6,7 @@ import * as L from 'leaflet';
 @Component({
     selector: 'app-map',
     standalone: true,
-    templateUrl: './map.component.html',
+    template: '<div id="map"></div>',
     styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
@@ -20,6 +20,8 @@ export class MapComponent implements OnInit {
         this.initMarkers();
         this.initMap();
         this.centerMap();
+        
+        // this.map.getBounds();
     }
 
     private initMarkers():void {
