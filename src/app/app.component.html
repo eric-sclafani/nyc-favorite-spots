@@ -1,8 +1,11 @@
 <div class="app-wrapper">
     <header>My Favorite NYC Food and Drink Spots</header>
     <div id="content-wrapper">
-        <app-location-list/>
-        <app-map/>
+        <app-location-list 
+            (locationEmitter)="selectedLocation = $event"
+            />
+        <app-map
+            [selectedLocation]="selectedLocation"/>
     </div>
 </div>
 

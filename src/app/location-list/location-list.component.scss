@@ -3,17 +3,32 @@
     display:flex;
     flex-direction: column;
     gap:10px;
-    max-height:90vh;
+    max-height:80vh;
+    height:80vh;
     overflow-y: auto;
+    border: ridge darkgray;
+    border-radius: 15px;
+    padding:10px;
 }
 
 .location-item {
     border: solid black 5px;
+    border-radius:15px;
     padding:10px;
+    width: 15vw;
 
     header {
         font-weight:700;
         font-size: 1.2rem;
+    }
+
+    &:hover {
+        background-color: lightgray;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: darkgray;
     }
 }
 

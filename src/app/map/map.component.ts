@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
-import { locations } from '../models/location';
+import { locations, Location } from '../models/location';
 import * as L from 'leaflet';
 
 @Component({
@@ -14,6 +14,9 @@ export class MapComponent implements OnInit {
     private map: L.Map
     private markers: L.Marker<number>[] = [];
 
+    @Input() selectedLocation: Location;
+    
+    
     constructor() { }
 
     ngOnInit() {
@@ -21,12 +24,16 @@ export class MapComponent implements OnInit {
         this.initMap();
         this.centerMap();
         
-        // this.map.getBounds();
     }
 
     private initMarkers():void {
         for (let loc of locations) {
-            this.markers.push(L.marker([loc.lat, loc.long]))
+
+            const marker = L.marker([loc.lat, loc.long]);
+            const popup = this.createPopup(marker, loc);
+            marker.bindPopup(popup).openPopup();
+
+            this.markers.push(marker);
         }
     }
 
@@ -39,6 +46,7 @@ export class MapComponent implements OnInit {
             }
         );
         L.tileLayer(baseMapURl).addTo(this.map);
+
     }
 
 
@@ -52,4 +60,27 @@ export class MapComponent implements OnInit {
 
         this.map.fitBounds(bounds);
     }
+
+    private createPopup(marker:L.Marker, loc:Location):L.Popup{
+
+        const contentString = `
+        <div class="card-wrapper">
+            <div class="card-title">
+                ${loc.name}
+            </div>
+        </div>
+        `
+
+
+        const popup = L.popup({className:'popup'})
+            .setLatLng(marker.getLatLng())
+            .setContent(contentString)
+            
+        
+        return popup;
+    }
+
+  
+
+
 }

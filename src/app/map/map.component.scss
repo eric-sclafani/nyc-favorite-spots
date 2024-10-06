@@ -1,5 +1,17 @@
 #map {
     height:85vh;
-    width:80vw;
+    width:70vw;
     margin:30px
 }   
+
+::ng-deep .popup {
+
+    div.card-wrapper {
+
+    }
+
+    div.card-title {
+        font-weight:700;
+    }
+    
+} 

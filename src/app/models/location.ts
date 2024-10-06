@@ -1,4 +1,4 @@
-interface Location {
+export interface Location {
     name: string;
     lat: number;
     long: number;
@@ -63,5 +63,13 @@ export const locations: Location[] = [
         review: 'Nice family-owned place. Best burritos I\'ve ever had in NYC so far.',
         favoriteOrders: ['Steak burrito', 'Spicy guacamole, chips'],
         link: 'http://www.amarantobklyn.com/'
+    },
+    {
+        name: 'Aromi',
+        lat: 40.675087368581, 
+        long: -73.99968032120483,
+        review: '',
+        favoriteOrders: ['Margherita pizza','Grissini Al Forno Con Nutella', 'Tiramisu', 'Aperol Spritz', 'Lemon Spritz'],
+        link: 'https://www.arominyc.com/'
     }
 ]

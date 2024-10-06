@@ -1,6 +1,6 @@
-import { Component } from '@angular/core'; 
+import { Component, EventEmitter, Output  } from '@angular/core'; 
 import { NgTemplateOutlet } from '@angular/common';
-import { locations } from '../models/location';
+import { Location, locations } from '../models/location';
 
 @Component({
   selector: 'app-location-list',
@@ -12,4 +12,12 @@ import { locations } from '../models/location';
 export class LocationListComponent {
 
     public locations = locations;
+    public selectedLoc:Location;
+
+    @Output() locationEmitter: EventEmitter<Location> = new EventEmitter();
+
+    public emitLocation(loc:Location){
+        this.locationEmitter.emit(loc)
+    }
+
 }
