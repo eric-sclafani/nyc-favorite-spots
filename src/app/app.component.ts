@@ -16,8 +16,16 @@ import { Location } from './models/location';
 export class AppComponent {
 
     public title = 'NYC Favorite Spots';
-    public selectedLocation: Location;
+    public selectedLocation: Location | null;
+    public resetMapView = false;
 
+    public triggerReset():void {
+        this.selectedLocation = null;
+        this.resetMapView = true;
+        setTimeout(() => this.resetMapView = false, 100);
+    }
+
+  
     
 
 }

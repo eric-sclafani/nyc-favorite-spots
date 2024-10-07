@@ -10,3 +10,8 @@ header {
     display:flex;
 }
 
+#left-panel {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}

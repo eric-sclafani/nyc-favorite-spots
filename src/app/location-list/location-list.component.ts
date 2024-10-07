@@ -12,7 +12,6 @@ import { Location, locations } from '../models/location';
 export class LocationListComponent {
 
     public locations = locations;
-    public selectedLoc:Location;
 
     @Output() locationEmitter: EventEmitter<Location> = new EventEmitter();
 

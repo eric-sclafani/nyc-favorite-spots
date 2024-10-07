@@ -1,11 +1,19 @@
 <div class="app-wrapper">
     <header>My Favorite NYC Food and Drink Spots</header>
     <div id="content-wrapper">
-        <app-location-list 
-            (locationEmitter)="selectedLocation = $event"
-            />
+        <div id="left-panel">
+            <button (click)="triggerReset()">
+                Reset Map View
+            </button>
+            <app-location-list 
+                (locationEmitter)="this.selectedLocation = $event;"
+                />
+        </div>
+        
         <app-map
-            [selectedLocation]="selectedLocation"/>
+            [selectedLocation]="selectedLocation"
+            [resetMapView]="resetMapView"
+            />
     </div>
 </div>
 
