@@ -6,12 +6,31 @@
 
 ::ng-deep .popup {
 
-    div.card-wrapper {
-
+    .leaflet-popup-content-wrapper{
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+    .card-wrapper {
+        display:flex;
+        flex-direction: column;
+        gap:10px;
+        align-items: center;
     }
 
-    div.card-title {
+    .card-title {
+        font-size: 1.1rem;
         font-weight:700;
+    }
+
+    .card-review {
+        color: #665e61;
+        font-style: italic;   
+        font-size:.85rem;
+        text-align:center;
+    }
+
+    .card-orders {
+        padding:0;
     }
     
 } 

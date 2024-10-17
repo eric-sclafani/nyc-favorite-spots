@@ -20,8 +20,8 @@ export const locations: Location[] = [
         name: 'Dave\'s Hot Chicken',
         lat: 40.692906591390994,
         long:  -73.98847380498599,
-        review: 'Really great chicken sandwhiches. Does them differently than most places.',
-        favoriteOrders: ['2 Sliders with fries, added cheese, medium spice level'],
+        review: 'Really great chicken sandwhiches. Prepares them differently than most places I\'ve been to.',
+        favoriteOrders: ['2 Sliders with cheese, medium spice level', 'Fries'],
         link: 'https://restaurants.daveshotchicken.com/ny/brooklyn/hot-chicken-adams-st/'
     },
     {
@@ -36,7 +36,7 @@ export const locations: Location[] = [
         name: 'Headrest Coffee',
         lat: 40.699770938457334,
         long: -73.9159079355029,
-        review: 'Best non-chain coffee I\'ve had. Very chill and hipster vibes to it.',
+        review: 'Best non-chain coffee I\'ve had. Very chill, hipster vibes to it.',
         favoriteOrders: ['Cold brew, black', "Bacon, egg, cheese on everything bagel"],
         link: 'https://headrestcoffee.com/'
     },
@@ -49,7 +49,7 @@ export const locations: Location[] = [
         link: 'http://places.singleplatform.com/tonys-pizzeria--restaurant-0/menu?ref=google'
     },
     {
-        name: 'Ramen Danbo Park Slope',
+        name: 'Ramen Danbo',
         lat: 40.67614876425373, 
         long: -73.97452541647573,
         review: 'Nice but very busy place. Fantastic ramen.',
@@ -68,8 +68,16 @@ export const locations: Location[] = [
         name: 'Aromi',
         lat: 40.675087368581, 
         long: -73.99968032120483,
-        review: '',
+        review: 'Fancy and expensive Italian place. Really great pizza.',
         favoriteOrders: ['Margherita pizza','Grissini Al Forno Con Nutella', 'Tiramisu', 'Aperol Spritz', 'Lemon Spritz'],
         link: 'https://www.arominyc.com/'
+    },
+    {
+        name: 'Barboncino Pizza',
+        lat: 40.672125527803985, 
+        long: -73.95716047845684,
+        review: 'Amazing personal pizzas',
+        favoriteOrders: ['Margherita pizza'],
+        link:'http://places.singleplatform.com/barboncino-pizza--bar/menu?ref=google'
     }
 ]

@@ -1,9 +1,9 @@
 <div class="app-wrapper">
-    <header>My Favorite NYC Food and Drink Spots</header>
+    <header>NYC Food and Drink Top Picks</header>
     <div id="content-wrapper">
         <div id="left-panel">
-            <button (click)="triggerReset()">
-                Reset Map View
+            <button (click)="triggerReset()" id="reset-view">
+                <strong>Reset Map View</strong>
             </button>
             <app-location-list 
                 (locationEmitter)="this.selectedLocation = $event;"

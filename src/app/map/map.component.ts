@@ -56,6 +56,9 @@ export class MapComponent implements OnInit, OnChanges {
             const marker = L.marker([loc.lat, loc.long]);
             const popup = this.createPopup(marker, loc);
             marker.bindPopup(popup).openPopup();
+            marker.on('click', (event) => {
+                this.map.setView(event.latlng, 50)
+            })
 
             this.markers.push(marker);
         }
@@ -88,11 +91,31 @@ export class MapComponent implements OnInit, OnChanges {
     private popupContent(loc:Location):string{
         return `
         <div class="card-wrapper">
+
             <div class="card-title">
                 ${loc.name}
             </div>
+           
+            <div class="card-review">
+                &nbsp;‟${loc.review}”&nbsp;
+            </div>
+
+            <ul class="card-orders">
+                ${this.popupOrdersList(loc)}
+            </ul>
+           
         </div>
         `
+    }
+
+    private popupOrdersList(loc:Location):string{
+        const orders:string[] = [];
+        loc.favoriteOrders?.forEach((order:string) => {
+            orders.push(
+                `<li class="order-item">${order}</li>`
+            )
+        })
+        return orders.join('');
     }
 
     private createPopup(marker:L.Marker, loc:Location):L.Popup{
