@@ -90,21 +90,20 @@ export class MapComponent implements OnInit, OnChanges {
 
     private popupContent(loc:Location):string{
         return `
-        <div class="card-wrapper">
-
-            <div class="card-title">
+        <a class="card-wrapper" href="${loc.link}" target="_blank">
+            <h2 class="card-title">
                 ${loc.name}
-            </div>
-           
+            </h2>
             <div class="card-review">
                 &nbsp;‟${loc.review}”&nbsp;
             </div>
-
-            <ul class="card-orders">
-                ${this.popupOrdersList(loc)}
-            </ul>
-           
-        </div>
+            <h3>Favorite Orders</h3>
+            <div class="orders">
+                <ul>
+                    ${this.popupOrdersList(loc)}
+                </ul>
+            </div>
+        </a>
         `
     }
 
@@ -112,7 +111,7 @@ export class MapComponent implements OnInit, OnChanges {
         const orders:string[] = [];
         loc.favoriteOrders?.forEach((order:string) => {
             orders.push(
-                `<li class="order-item">${order}</li>`
+                `<li>${order}</li>`
             )
         })
         return orders.join('');
