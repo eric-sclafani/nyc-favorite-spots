@@ -1,13 +1,6 @@
-header {
-    text-align: center;
-    margin-top: 20px;
-    font-weight:700;
-    font-size:1.7rem;
-}
-
-
 #content-wrapper {
     display:flex;
+    margin-top:10px;
 }
 
 #left-panel {
@@ -21,7 +14,7 @@ header {
     height:50px;
     font-size:1rem;
     border:solid 2px;
-    background-color:#fce9d4;
+    background-color:#f5fbf4;;
     border-radius: 20px;
     box-shadow:6px 4.5px;
     transition: all .2s;

@@ -1,21 +1,19 @@
-<div class="app-wrapper">
-    <header>NYC Food and Drink Top Picks</header>
-    <div id="content-wrapper">
-        <div id="left-panel">
-            <button (click)="triggerReset()" id="reset-view">
-                <strong>Reset Map View</strong>
-            </button>
-            <app-location-list 
-                (locationEmitter)="this.selectedLocation = $event;"
-                />
-        </div>
-        
-        <app-map
-            [selectedLocation]="selectedLocation"
-            [resetMapView]="resetMapView"
+<div id="content-wrapper">
+    <div id="left-panel">
+        <button (click)="triggerReset()" id="reset-view">
+            <strong>Reset Map View</strong>
+        </button>
+        <app-location-list 
+            (locationEmitter)="this.selectedLocation = $event;"
             />
     </div>
+    
+    <app-map
+        [selectedLocation]="selectedLocation"
+        [resetMapView]="resetMapView"
+        />
 </div>
+
 
 
   

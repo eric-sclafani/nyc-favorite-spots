@@ -1,34 +1,38 @@
 #locations-wrapper {
     margin: 20px 0 0 20px;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    gap:10px;
-    max-height:80vh;
-    height:80vh;
+    background-color:  #f5fbf4;
+    gap: 10px;
+    max-height: 80vh;
+    height: 80vh;
     overflow-y: auto;
-    border: ridge darkgray;
     border-radius: 15px;
-    padding:10px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .location-item {
-    border: solid black 5px;
-    border-radius:15px;
-    padding:10px;
+    border: solid black 1px;
+    border-radius: 25px;
+    padding: 10px;
     width: 15vw;
+    transition: margin .2s;
+    text-align: center;
 
     header {
-        font-weight:700;
+        font-weight: 700;
         font-size: 1.2rem;
     }
 
     &:hover {
-        background-color: lightgray;
+        background-color: white;
+        margin: 5px 0 5px 0;
+        box-shadow: 5px 5px  #bee3ba;
         cursor: pointer;
     }
 
     &:active {
-        background-color: darkgray;
+        background-color:  #eaeaea;
     }
 }
-

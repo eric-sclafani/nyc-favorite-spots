@@ -1,7 +1,10 @@
 #map {
     height:85vh;
     width:70vw;
-    margin:30px
+    margin:30px;
+    border: 4mm ridge white;
+    border-radius: 20px;
+
 }   
 
 ::ng-deep .popup {
@@ -30,6 +33,7 @@
 
     .card-title {
         font-weight:700;
+        margin:0;
     }
 
     .card-review {
@@ -47,7 +51,7 @@
         list-style:none;
 
         li {
-
+            font-size:.9rem;
             margin-bottom:5px;
             padding-right:5px;
 
@@ -56,7 +60,7 @@
             }
 
             &:hover{
-                background-color: #eaffff;
+
                 border-radius: 5px;
             }
         }
